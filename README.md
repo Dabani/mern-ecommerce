@@ -1,1 +1,8 @@
-# mern-ecommerce
+# MERN ECOMMERCE BACKEND
+
+## Stacks
+
+- MongoDB
+- Express
+- React
+- NodeJS
