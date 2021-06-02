@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 // Routes
 const authRoutes = require('./routes/auth');
 const adminRoutes = require('./routes/admin/auth');
+const categoryRoutes = require('./routes/category');
 
 // Environment variable or you can say constants
 env.config();
@@ -26,6 +27,7 @@ mongoose.connect(`mongodb+srv://${process.env.MONGO_DB_USER}:${process.env.MONGO
 app.use(express.json());
 app.use('/api', authRoutes);
 app.use('/api', adminRoutes);
+app.use('/api', categoryRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
